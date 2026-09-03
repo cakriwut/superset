@@ -32,6 +32,17 @@ Spend your time shipping, not waiting.
 
 </div>
 
+## Linux development setup
+
+From a Linux checkout, install the project dependencies with:
+
+```bash
+./scripts/install-linux.sh
+```
+
+The script uses Bun when it is available. If Bun is not installed but npm is
+available, it installs Bun with npm and then installs the project dependencies.
+
 ## Code 10x Faster With No Switching Cost
 
 Superset runs CLI-based coding agents in parallel across isolated git worktrees, with built-in terminal, review, and open-in-editor workflows.
