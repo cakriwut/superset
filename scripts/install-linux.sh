@@ -16,6 +16,10 @@ fi
 if command -v npm >/dev/null 2>&1; then
 	echo "Bun was not found; installing it with npm..."
 	npm install --global bun
+	if ! command -v bun >/dev/null 2>&1; then
+		echo "npm installed Bun, but the Bun executable is not on PATH." >&2
+		exit 1
+	fi
 	echo "Installing dependencies with Bun..."
 	bun install --frozen
 	exit 0
